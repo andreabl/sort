@@ -44,24 +44,3 @@ def sort(input_file, output_file):
 
         except Exception, err_msg:
             print "Error while sorting: %s" % str(err_msg)
-
-	
-if __name__ == "__main__":
-
-	if len(sys.argv) != 3:
-		print "missing arguments"
-			
-	else:
-		input_file = sys.argv[1]
-		output_file = sys.argv[2]
-
-		with open(input_file) as f:
-			content = f.readlines()
-			
-			quicksort(content,0,len(content)-1)
-
-			with open(output_file, "w") as output:
-				for line in content:
-					output.write(line)
-		
-
