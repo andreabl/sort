@@ -34,11 +34,3 @@ def merge_files(output_file, input_files):
 			    
 	except Exception, err_msg:
 	    print "Error while merging: %s" % str(err_msg)
-
-def test():
-	files = ['part_001.txt', 'part_002.txt', 'part_003.txt', 'part_004.txt']
-	merge_files('output-file.txt', files)
-
-if __name__ == '__main__':
-    test()
-

@@ -32,14 +32,19 @@ def quicksort(A, start, end):
     
 
 def sort(input_file, output_file):
-	with open(input_file) as f:
-		content = f.readlines()
-		
-		quicksort(content,0,len(content)-1)
+	try:
+		with open(input_file) as f:
+			content = f.readlines()
+			
+			quicksort(content,0,len(content)-1)
 
-		with open(output_file, "w") as output:
-			for line in content:
-				output.write(line)
+			with open(output_file, "w") as output:
+				for line in content:
+					output.write(line)
+
+        except Exception, err_msg:
+            print "Error while sorting: %s" % str(err_msg)
+
 	
 if __name__ == "__main__":
 

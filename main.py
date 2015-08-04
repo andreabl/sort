@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 
-import argparse
+import argparse, os
 
 from quicksort import sort
 from split import split_file
@@ -21,7 +21,6 @@ if __name__ == '__main__':
 
 	for split_file in splitted_files:
 		sort(split_file, "%s_sorted" % split_file)	
-
 	
 	splitted_files_sorted =  ["%s_sorted" % filename for filename in splitted_files]
 
@@ -30,4 +29,6 @@ if __name__ == '__main__':
 	# cleanup
 	for filename in splitted_files + splitted_files_sorted:
 		os.remove(filename)
+
+	print "success"
 
