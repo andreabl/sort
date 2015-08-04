@@ -14,7 +14,7 @@ if __name__ == '__main__':
 	parser.add_argument('--input', help='File to sort')
 	parser.add_argument('--output', help='Output file')
 	parser.add_argument('--tempfile', help='Temporarily output pattern prefix (default: output)', default='output')
-	parser.add_argument('--splitsize', help='Number of lines in each split (default: 10000)', type=int, default=10000)
+	parser.add_argument('--splitsize', help='Number of bytes in each split (default: 10000)', type=int, default=10000)
 	args = parser.parse_args()
 
 	# Let's split up the files in manageable smaller files
